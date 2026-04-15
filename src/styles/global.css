@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Jost:regular,600);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +7,16 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Jost, sans-serif;
   font-size: 18px;
+  color: #fff;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
 }
 
 input:focus,

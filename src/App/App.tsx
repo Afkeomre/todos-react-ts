@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { Todo } from '../types/data';
+import Container from '../components/Container/Container';
+import Header from '../components/Header/Header';
 import TodoList from '../components/TodoList/TodoList';
 import TodoForm from '../components/TodoForm/TodoForm';
 import styles from './App.module.css';
@@ -24,14 +26,18 @@ const App = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1>Todo List</h1>
-      <TodoForm addTodo={addTodo} />
-      <TodoList
-        items={todos}
-        removeTodo={removeTodo}
-        toggleCompleted={toggleCompleted}
-      />
+    <div className={styles.wrapper}>
+      <Header />
+      <main>
+        <Container>
+          <TodoForm addTodo={addTodo} />
+          <TodoList
+            items={todos}
+            removeTodo={removeTodo}
+            toggleCompleted={toggleCompleted}
+          />
+        </Container>
+      </main>
     </div>
   );
 };

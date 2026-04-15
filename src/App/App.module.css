@@ -1,8 +1,4 @@
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.wrapper {
+  min-height: 100vh;
+  background-color: #d6d7ef;
 }

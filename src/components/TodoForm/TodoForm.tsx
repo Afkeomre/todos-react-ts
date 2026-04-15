@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import type { ChangeEvent, SubmitEvent } from 'react';
+import styles from './TodoForm.module.css';
 
 interface TodoFormProps {
   addTodo: (value: string) => void;
@@ -27,9 +28,18 @@ const TodoForm = ({ addTodo }: TodoFormProps) => {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" ref={inputRef} value={value} onChange={handleChange} />
-      <button type="submit">Add</button>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="New todo"
+        ref={inputRef}
+        value={value}
+        onChange={handleChange}
+      />
+      <button className={styles.button} type="submit">
+        Add
+      </button>
     </form>
   );
 };
