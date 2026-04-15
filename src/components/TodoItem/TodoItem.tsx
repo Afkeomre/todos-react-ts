@@ -20,7 +20,9 @@ const TodoItem = ({
         checked={completed}
         onChange={() => toggleCompleted(id)}
       />
-      <span className={styles.title}>{title}</span>
+      <span className={`${styles.title} ${completed ? styles.completed : ''}`}>
+        {title}
+      </span>
       <button className={styles.button} onClick={() => removeTodo(id)}>
         x
       </button>
