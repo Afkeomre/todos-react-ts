@@ -2,12 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
   background-color: var(--color-inverse);
   color: var(--color-primary);
   font-weight: 600;
   border-radius: 15px;
   box-shadow: var(--shadow);
   padding: 15px 30px;
+  word-break: break-word;
 }
 
 .checkbox {
@@ -33,8 +35,8 @@
 .checkbox span::after {
   content: '';
   position: absolute;
-  left: 45%;
-  top: 45%;
+  left: 50%;
+  top: 50%;
 
   width: 4px;
   height: 8px;
