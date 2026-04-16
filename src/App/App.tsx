@@ -31,11 +31,15 @@ const App = () => {
       <main>
         <Container>
           <TodoForm addTodo={addTodo} />
-          <TodoList
-            items={todos}
-            removeTodo={removeTodo}
-            toggleCompleted={toggleCompleted}
-          />
+          {todos.length > 0 ? (
+            <TodoList
+              items={todos}
+              removeTodo={removeTodo}
+              toggleCompleted={toggleCompleted}
+            />
+          ) : (
+            <p className={styles.empty}>There are no todos yet</p>
+          )}
         </Container>
       </main>
     </div>

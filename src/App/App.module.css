@@ -1,4 +1,12 @@
 .wrapper {
   min-height: 100vh;
-  background-color: #d6d7ef;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.empty {
+  font-size: 20px;
+  color: var(--color-primary);
 }

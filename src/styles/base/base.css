@@ -9,7 +9,7 @@
 body {
   font-family: Jost, sans-serif;
   font-size: 18px;
-  color: #fff;
+  color: var(--color-inverse);
 }
 
 input,
@@ -17,6 +17,10 @@ button {
   font-family: inherit;
   font-size: inherit;
   border: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 input:focus,

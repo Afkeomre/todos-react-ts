@@ -1,13 +1,75 @@
-.button {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: red;
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-inverse);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 15px 30px;
 }
 
-.title {
-  display: inline-block;
-  margin: 0 10px;
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-icon);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox span::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 45%;
+
+  width: 4px;
+  height: 8px;
+  border: solid var(--color-icon);
+  border-width: 0 2px 2px 0;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.checkbox:hover span,
+.checkbox:hover span::after {
+  border-color: var(--color-primary);
+}
+
+.checkbox input:checked + span::after {
+  opacity: 1;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-icon);
+}
+
+.delete:hover .icon {
+  color: var(--color-primary);
 }
 
 .completed {

@@ -1,0 +1,13 @@
+:root {
+  --color-primary: #9395d3;
+  --color-primary-hover: #8b8dd0;
+  --color-secondary: #d6d7ef;
+  --color-icon: #b3b7ee;
+  --color-inverse: #fff;
+  --color-border: #8b8787;
+  --color-text: #6e6e6e;
+  --color-placeholder: #a19d9d;
+
+  --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --shadow-hover: 4px 0 4px 0 rgba(0, 0, 0, 0.25);
+}
